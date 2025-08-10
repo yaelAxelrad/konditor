@@ -306,3 +306,25 @@ footer a {
 
     .contact-wrapper { flex-direction: column; }
 }
+
+/* --- עיצוב הודעות טופס --- */
+.form-messages {
+    margin: 15px 0;
+    padding: 15px;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+    display: none; /* מוסתר כברירת מחדל */
+}
+
+.form-messages.success {
+    background-color: #d4edda;
+    color: #155724;
+    display: block;
+}
+
+.form-messages.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    display: block;
+}
