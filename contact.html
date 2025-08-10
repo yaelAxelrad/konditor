@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>יצירת קשר - שם הקונדיטורית</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">שם הקונדיטורית</a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">בית</a></li>
+                    <li><a href="gallery.html">גלריה</a></li>
+                    <li><a href="about.html">אודות</a></li>
+                    <li><a href="services.html">שירותים והזמנות</a></li>
+                    <li><a href="contact.html" class="active">יצירת קשר</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container page-title">
+            <h1>דברו איתי</h1>
+            <p>מתכננים אירוע? רוצים להזמין עוגה? מלאו את הטופס ואחזור אליכם בהקדם.</p>
+        </div>
+
+        <section class="contact-form-section">
+            <div class="container">
+                <div class="contact-wrapper">
+                    <form action="#" method="POST" class="contact-form">
+                        <!-- הערה: טופס זה הוא עיצוב בלבד ואינו שולח מידע. יש צורך במפתח שיחבר אותו למערכת. -->
+                        <div class="form-group">
+                            <label for="name">שם מלא</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">כתובת מייל</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">טלפון</label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+                         <div class="form-group">
+                            <label for="event-type">סוג האירוע</label>
+                            <input type="text" id="event-type" name="event-type">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">מה תרצו להזמין?</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="cta-button">שליחה</button>
+                    </form>
+                    <div class="contact-details">
+                        <h3>פרטים נוספים</h3>
+                        <p><strong>טלפון:</strong> 05X-XXXXXXX</p>
+                        <p><strong>מייל:</strong> myemail@example.com</p>
+                        <p><strong>איזור פעילות:</strong> מרכז, השרון</p>
+                        <p>עקבו אחרי באינסטגרם ובפייסבוק כדי להישאר מעודכנים!</p>
+                        <div class="social-links-contact">
+                            <a href="#">פייסבוק</a> | <a href="#">אינסטגרם</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 כל הזכויות שמורות ל-שם הקונדיטורית | בניית אתר: קוד שנכתב ע"י Gemini</p>
+            <div class="social-links">
+                <a href="#">פייסבוק</a> | <a href="#">אינסטגרם</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

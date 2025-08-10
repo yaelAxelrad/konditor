@@ -3,295 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>שם הקונדיטוריה שלך - עוגות מעוצבות וברים</title>
-    <style>
-        /* --- עיצוב כללי --- */
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #fdf7f4; /* רקע ורדרד-אפרסק עדין */
-            color: #442c2e; /* צבע טקסט חום-כהה */
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: auto;
-            padding: 20px;
-        }
-
-        h1, h2, h3 {
-            font-family: 'Garamond', serif; /* פונט אלגנטי לכותרות */
-            color: #d17a82; /* צבע ורוד-קורל לכותרות */
-        }
-        
-        h2 {
-            text-align: center;
-            font-size: 2.5em;
-            margin-bottom: 40px;
-        }
-
-        /* --- תפריט ניווט --- */
-        nav {
-            background-color: #ffffff;
-            padding: 15px 30px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        nav .logo {
-            font-size: 1.8em;
-            font-weight: bold;
-            color: #d17a82;
-        }
-
-        nav ul {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-            display: flex;
-        }
-
-        nav ul li {
-            margin-right: 25px;
-        }
-
-        nav ul li a {
-            text-decoration: none;
-            color: #442c2e;
-            font-weight: bold;
-            font-size: 1.1em;
-            transition: color 0.3s;
-        }
-
-        nav ul li a:hover {
-            color: #d17a82;
-        }
-
-        /* --- אזור פתיחה (Hero) --- */
-        .hero {
-            background-image: url('https://via.placeholder.com/1500x700.png?text=תמונה+מרהיבה+של+עוגה'); /* החליפי לתמונה שלך */
-            background-size: cover;
-            background-position: center;
-            color: white;
-            text-align: center;
-            padding: 150px 20px;
-            text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
-        }
-
-        .hero h1 {
-            font-size: 4em;
-            margin: 0;
-            color: white;
-        }
-
-        .hero p {
-            font-size: 1.5em;
-            margin-top: 10px;
-        }
-
-        .cta-button {
-            display: inline-block;
-            margin-top: 30px;
-            padding: 15px 30px;
-            background-color: #d17a82;
-            color: white;
-            text-decoration: none;
-            font-size: 1.2em;
-            border-radius: 5px;
-            transition: background-color 0.3s;
-        }
-
-        .cta-button:hover {
-            background-color: #b96b74;
-        }
-
-        /* --- גלריית עוגות --- */
-        #gallery .gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 25px;
-        }
-
-        .gallery-item {
-            background-color: #ffffff;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-            transition: transform 0.3s;
-        }
-        
-        .gallery-item:hover {
-            transform: translateY(-5px);
-        }
-
-        .gallery-item img {
-            width: 100%;
-            height: 250px;
-            object-fit: cover;
-            display: block;
-        }
-
-        .gallery-item-info {
-            padding: 20px;
-        }
-
-        .gallery-item-info h3 {
-            margin-top: 0;
-            font-size: 1.5em;
-        }
-
-        /* --- אודות --- */
-        #about {
-            background-color: #ffffff;
-            padding: 60px 20px;
-        }
-
-        #about .about-content {
-            display: flex;
-            align-items: center;
-            gap: 50px;
-        }
-
-        #about img {
-            max-width: 300px;
-            border-radius: 50%;
-        }
-
-        /* --- יצירת קשר --- */
-        #contact {
-            padding: 60px 20px;
-        }
-
-        #contact form {
-            max-width: 600px;
-            margin: 0 auto;
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-        }
-
-        #contact input, #contact textarea {
-            padding: 15px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            font-size: 1em;
-            font-family: inherit;
-        }
-        
-        #contact textarea {
-            resize: vertical;
-            min-height: 150px;
-        }
-
-        #contact button {
-            padding: 15px;
-            border: none;
-            background-color: #d17a82;
-            color: white;
-            font-size: 1.2em;
-            font-weight: bold;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-        
-        #contact button:hover {
-            background-color: #b96b74;
-        }
-
-        /* --- פוטר (חלק תחתון) --- */
-        footer {
-            background-color: #442c2e;
-            color: #fdf7f4;
-            text-align: center;
-            padding: 20px;
-        }
-
-    </style>
+    <title>שם הקונדיטורית - עוגות מעוצבות וברים מתוקים</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <!-- תפריט ניווט עליון -->
-    <nav>
-        <div class="logo">שם הקונדיטוריה</div>
-        <ul>
-            <li><a href="#hero">בית</a></li>
-            <li><a href="#gallery">הגלריה המתוקה</a></li>
-            <li><a href="#about">אודות</a></li>
-            <li><a href="#contact">יצירת קשר</a></li>
-        </ul>
-    </nav>
-
-    <!-- אזור פתיחה עם תמונה גדולה -->
-    <header class="hero" id="hero">
-        <h1>אמנות מתוקה, בדיוק כמו שחלמתם</h1>
-        <p>עוגות מעוצבות, ברי קינוחים ומתוקים לאירועים מיוחדים</p>
-        <a href="#contact" class="cta-button">להזמנות וייעוץ</a>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">שם הקונדיטורית</a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html" class="active">בית</a></li>
+                    <li><a href="gallery.html">גלריה</a></li>
+                    <li><a href="about.html">אודות</a></li>
+                    <li><a href="services.html">שירותים והזמנות</a></li>
+                    <li><a href="contact.html">יצירת קשר</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
     <main>
-        <!-- גלריית עוגות -->
-        <section id="gallery" class="container">
-            <h2>הגלריה המתוקה שלי</h2>
-            <div class="gallery-grid">
-                <!-- פריט גלריה 1 -->
-                <div class="gallery-item">
-                    <img src="https://via.placeholder.com/400x300.png?text=עוגת+חתונה" alt="עוגת חתונה מפוארת">
-                    <div class="gallery-item-info">
-                        <h3>עוגות חתונה</h3>
-                        <p>עיצובים אלגנטיים וטעמים בלתי נשכחים ליום המאושר בחייכם.</p>
-                    </div>
-                </div>
-                <!-- פריט גלריה 2 -->
-                <div class="gallery-item">
-                    <img src="https://via.placeholder.com/400x300.png?text=עוגת+יום+הולדת" alt="עוגת יום הולדת צבעונית">
-                    <div class="gallery-item-info">
-                        <h3>עוגות יום הולדת</h3>
-                        <p>עוגות קונספט בעיצוב אישי שיהפכו כל חגיגה למתוקה במיוחד.</p>
-                    </div>
-                </div>
-                <!-- פריט גלריה 3 -->
-                <div class="gallery-item">
-                    <img src="https://via.placeholder.com/400x300.png?text=בר+מתוקים" alt="בר מתוקים עשיר">
-                    <div class="gallery-item-info">
-                        <h3>ברים מתוקים</h3>
-                        <p>מגוון קינוחי בוטיק אישיים שמשדרגים כל אירוע.</p>
-                    </div>
+        <section class="hero">
+            <div class="hero-text">
+                <h1>אומנות מתוקה, בדיוק כמו שחלמתם</h1>
+                <p>עוגות מעוצבות לאירועים, ברי קינוחים ומתוקים בהתאמה אישית</p>
+                <a href="gallery.html" class="cta-button">צפו בגלריה</a>
+            </div>
+        </section>
+
+        <section class="featured-creations">
+            <div class="container">
+                <h2>יצירות נבחרות</h2>
+                <div class="gallery-grid-home">
+                    <div class="gallery-item"><img src="images/cake1.jpg" alt="עוגת חתונה מפוארת"></div>
+                    <div class="gallery-item"><img src="images/cake2.jpg" alt="עוגת יום הולדת צבעונית"></div>
+                    <div class="gallery-item"><img src="images/dessert-bar1.jpg" alt="בר מתוקים עשיר"></div>
                 </div>
             </div>
         </section>
 
-        <!-- חלק האודות -->
-        <section id="about">
-            <div class="container about-content">
-                <img src="https://via.placeholder.com/300x300.png?text=התמונה+שלך" alt="תמונה של בעלת העסק">
-                <div>
-                    <h2>קצת עליי</h2>
-                    <p>נעים מאוד, שמי [השם שלך] ואני קונדיטורית ומעצבת עוגות. מאז שאני זוכרת את עצמי, המטבח היה הממלכה שלי והאפייה הייתה התשוקה הגדולה ביותר. אני מאמינה שכל עוגה היא יצירת אמנות, סיפור של טעמים, צבעים ומרקמים.</p>
-                    <p>כל העוגות והקינוחים נאפים במקום, עם הקפדה על חומרי הגלם האיכותיים והטריים ביותר. אני מזמינה אתכם להתרשם מהעבודות שלי וליצור יחד את העוגה המושלמת עבורכם.</p>
-                </div>
+        <section class="about-short">
+            <div class="container">
+                <img src="images/profile-pic.jpg" alt="שם הקונדיטורית" class="profile-pic">
+                <h2>קצת עלי</h2>
+                <p>היי, אני [שמך]. מאז ומתמיד, אפייה הייתה התשוקה הגדולה שלי. אני מאמינה שכל עוגה היא יצירת אומנות שמספרת סיפור וכל ביס הוא חוויה. אני משתמשת בחומרי הגלם האיכותיים ביותר ויוצרת כל עוגה וקינוח באהבה ותשומת לב לפרטים הקטנים...</p>
+                <a href="about.html" class="link-button">קראו עוד</a>
             </div>
         </section>
 
-        <!-- יצירת קשר -->
-        <section id="contact" class="container">
-            <h2>דברו איתי</h2>
-            <form action="#" method="post">
-                <input type="text" name="name" placeholder="שם מלא" required>
-                <input type="email" name="email" placeholder="כתובת מייל" required>
-                <input type="tel" name="phone" placeholder="מספר טלפון">
-                <textarea name="message" placeholder="איך אוכל לעזור?" required></textarea>
-                <button type="submit">שליחה</button>
-            </form>
-        </section>
     </main>
 
-    <!-- פוטר (חלק תחתון) -->
     <footer>
-        <p>&copy; 2025 כל הזכויות שמורות ל[שם הקונדיטוריה שלך]</p>
+        <div class="container">
+            <p>&copy; 2025 כל הזכויות שמורות ל-שם הקונדיטורית | בניית אתר: קוד שנכתב ע"י Gemini</p>
+            <div class="social-links">
+                <a href="#">פייסבוק</a> | <a href="#">אינסטגרם</a>
+            </div>
+        </div>
     </footer>
 
 </body>

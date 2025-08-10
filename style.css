@@ -1,0 +1,308 @@
+/* --- הגדרות כלליות --- */
+:root {
+    --primary-color: #8D5B4C; /* חום-אדמדם עדין */
+    --secondary-color: #F4EAE6; /* רקע ורוד-בז' בהיר */
+    --text-color: #333333;
+    --header-font: 'Assistant', sans-serif;
+    --body-font: 'Assistant', sans-serif;
+}
+
+body {
+    font-family: var(--body-font);
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+    color: var(--text-color);
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+h1, h2, h3 {
+    font-family: var(--header-font);
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+h1 { font-size: 3rem; }
+h2 { font-size: 2.2rem; text-align: center; margin-bottom: 40px;}
+p { margin-bottom: 20px; }
+a { color: var(--primary-color); text-decoration: none; }
+
+/* --- כותרת עליונה (Header) וניווט --- */
+header {
+    background-color: #ffffff;
+    padding: 15px 0;
+    border-bottom: 1px solid #eee;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo a {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav li {
+    margin-right: 25px;
+}
+
+nav a {
+    font-size: 1.1rem;
+    font-weight: 400;
+    transition: color 0.3s;
+}
+
+nav a:hover, nav a.active {
+    color: #000;
+    font-weight: 700;
+}
+
+/* --- אזור הגיבור (Hero) --- */
+.hero {
+    background: url('images/hero-background.jpg') no-repeat center center/cover;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    position: relative;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.hero-text {
+    position: relative;
+    z-index: 2;
+}
+
+.hero h1 {
+    color: white;
+    font-size: 4rem;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    font-weight: 300;
+}
+
+.cta-button {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 15px 30px;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    display: inline-block;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+    border: none;
+    cursor: pointer;
+}
+
+.cta-button:hover {
+    background-color: #6a453a;
+}
+
+/* --- אזורים כלליים --- */
+section {
+    padding: 80px 0;
+}
+
+.featured-creations {
+    background-color: var(--secondary-color);
+}
+
+.gallery-grid-home {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.about-short {
+    text-align: center;
+}
+
+.about-short .profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+.about-short p {
+    max-width: 700px;
+    margin: 0 auto 30px auto;
+}
+
+.link-button {
+    font-weight: 700;
+    text-decoration: underline;
+}
+
+/* --- כותרת עמוד --- */
+.page-title {
+    text-align: center;
+    padding: 60px 0;
+    background-color: var(--secondary-color);
+}
+.page-title h1 { margin-bottom: 10px; }
+.page-title p { max-width: 600px; margin-left: auto; margin-right: auto; }
+
+/* --- עמוד גלריה --- */
+.gallery-grid-full {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.gallery-item-full img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 5px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.gallery-item-full img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+/* --- עמוד אודות --- */
+.about-full .about-content {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+.about-full img {
+    max-width: 400px;
+    border-radius: 5px;
+}
+
+/* --- עמוד שירותים --- */
+.service-item {
+    border-bottom: 1px solid #eee;
+    padding: 30px 0;
+}
+.service-item:last-of-type { border-bottom: none; }
+.service-item h3 { margin-top: 0; }
+
+.how-to-order {
+    background-color: var(--secondary-color);
+    padding: 40px;
+    border-radius: 5px;
+    margin-top: 60px;
+    text-align: center;
+}
+
+.how-to-order ol {
+    list-style-position: inside;
+    text-align: right;
+    display: inline-block;
+    margin-top: 20px;
+}
+.how-to-order li { margin-bottom: 15px; }
+
+/* --- עמוד יצירת קשר --- */
+.contact-wrapper {
+    display: flex;
+    gap: 50px;
+    background-color: #f9f9f9;
+    padding: 40px;
+    border-radius: 5px;
+}
+.contact-form { flex: 2; }
+.contact-details { flex: 1; }
+
+.form-group { margin-bottom: 20px; }
+.form-group label { display: block; margin-bottom: 8px; font-weight: 700; }
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: var(--body-font);
+    font-size: 1rem;
+}
+.form-group input:focus, .form-group textarea:focus {
+    outline: 2px solid var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.social-links-contact { margin-top: 20px; }
+.social-links-contact a { margin-left: 15px; font-weight: 700; }
+
+
+/* --- כותרת תחתונה (Footer) --- */
+footer {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+footer p {
+    margin: 0 0 10px 0;
+    font-size: 0.9rem;
+}
+
+footer a {
+    color: white;
+    text-decoration: underline;
+}
+
+/* --- התאמה למובייל (Responsive) --- */
+@media (max-width: 768px) {
+    h1 { font-size: 2.5rem; }
+    .hero h1 { font-size: 3rem; }
+    .hero p { font-size: 1.2rem; }
+
+    header .container { flex-direction: column; }
+    nav ul { margin-top: 15px; }
+    
+    .gallery-grid-home { grid-template-columns: 1fr; }
+    
+    .about-full .about-content { flex-direction: column; }
+    .about-full img { max-width: 100%; }
+
+    .contact-wrapper { flex-direction: column; }
+}
