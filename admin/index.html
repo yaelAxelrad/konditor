@@ -1,1 +1,27 @@
-fgkcxc
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ניהול אתר - התחברות</title>
+    <link rel="stylesheet" href="admin-style.css">
+</head>
+<body class="login-page">
+    <div class="login-container">
+        <h2>מערכת ניהול</h2>
+        <form id="loginForm">
+            <div class="form-group">
+                <label for="username">שם משתמש</label>
+                <input type="text" id="username" required>
+            </div>
+            <div class="form-group">
+                <label for="password">סיסמה</label>
+                <input type="password" id="password" required>
+            </div>
+            <button type="submit" class="cta-button">התחברות</button>
+            <p id="loginMessage" class="error-message"></p>
+        </form>
+    </div>
+    <script src="admin.js"></script>
+</body>
+</html>

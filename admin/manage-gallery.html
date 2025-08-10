@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>מערכת ניהול - גלריה</title>
+    <link rel="stylesheet" href="admin-style.css">
+</head>
+<body>
+    <div class="admin-wrapper">
+        <aside class="sidebar">
+            <h3>ניהול האתר</h3>
+            <nav>
+                <ul>
+                    <li><a href="dashboard.html">ראשי</a></li>
+                    <li><a href="manage-gallery.html" class="active">ניהול גלריה</a></li>
+                    <li><a href="manage-about.html">עריכת דף אודות</a></li>
+                    <li><a href="#" id="logoutBtn">התנתקות</a></li>
+                </ul>
+            </nav>
+        </aside>
+        <main class="admin-content">
+            <header class="admin-header">
+                <h1>ניהול גלריה</h1>
+            </header>
+            <section>
+                <h2>הוספת תמונה חדשה</h2>
+                <form id="uploadForm">
+                    <div class="form-group">
+                        <label for="imageTitle">כותרת התמונה (לצורך תיאור)</label>
+                        <input type="text" id="imageTitle" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="imageFile">בחירת קובץ</label>
+                        <input type="file" id="imageFile" accept="image/jpeg, image/png" required>
+                    </div>
+                    <button type="submit" class="cta-button">העלאת תמונה</button>
+                </form>
+            </section>
+            <section>
+                <h2>התמונות הקיימות</h2>
+                <div id="gallery-management-grid">
+                    <!-- תמונות מהשרת יוצגו כאן ע"י JavaScript -->
+                    <div class="managed-image">
+                        <img src="../images/cake1.jpg" alt="דוגמה">
+                        <p>עוגת חתונה מפוארת</p>
+                        <button class="delete-btn">מחיקה</button>
+                    </div>
+                     <div class="managed-image">
+                        <img src="../images/cake2.jpg" alt="דוגמה">
+                        <p>עוגת יום הולדת צבעונית</p>
+                        <button class="delete-btn">מחיקה</button>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="admin.js"></script>
+</body>
+</html>
